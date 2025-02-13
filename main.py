@@ -7,6 +7,9 @@
 
 #main()
 
+def dict_sort(dict):
+    return dict["num"]
+
 def main():
     char_dict = {}
     with open("books/frankenstein.txt") as f:
@@ -18,9 +21,15 @@ def main():
                 char_dict[char] += 1
             else:
                 char_dict[char] = 1
-    print char_dict
-            
-        
+    return char_dict
         
 main()
 
+def sort(char_dict):
+    char_list = []
+    for char, count in char_dict.items():
+        char_list.append({"letter": char, "number": count})
+    sorted_list = char_list.sort(key=)
+    print(sorted_list)
+
+sort(main())
